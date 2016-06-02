@@ -1,0 +1,28 @@
+//
+//  EditorHeader.pch
+//  EditorController
+//
+//  Created by zhangz on 16/4/7.
+//  Copyright © 2016年 zhangz. All rights reserved.
+//
+
+#ifdef __OBJC__
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+
+//#define kServerAdress @"http://pinfanapp.com" //ceshi
+////#define kServerAdress @"http://192.168.36.205:8080/" //ceshi
+//#define easeMobAppKey @"yuefan#pinfan"//环信测试
+//#define yuefanToken @"yuefanToken"
+// 获取沙盒Library路径
+#define kLIBRARY_PATH [NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES) objectAtIndex:0]
+
+#define FILEPATH(string)  [[NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) objectAtIndex:0] stringByAppendingPathComponent:string]
+//获取设备屏幕宽高
+#define kWIDTH [UIScreen mainScreen].bounds.size.width
+#define kHEIGHT [UIScreen mainScreen].bounds.size.height
+//系统版本
+#define SYSTEM_FLOAT_VER ([[UIDevice currentDevice].systemVersion doubleValue])
+//获得RGB颜色
+#define ViewColor(r, g, b,a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:a]
+#endif
